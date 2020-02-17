@@ -1,10 +1,9 @@
 Trying to get GNUstep to work on Linux...
-
 First install GNUStep: https://github.com/plaurent/gnustep-build
 
 Then run one of these two commands:
-    make -f Makefile # (build without GNUstep shite)
     make -f GNUmakefile # (build with GNUstep shite)
+    aite # (build w/o GNUstep shite, needs https://github.com/rweichler/aite)
 
-the 2nd one goes by default. you also might need to source a thing:
-    /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
+for the 1st one, you also might need to source this thing:
+    . /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
