@@ -43,5 +43,5 @@ function default()
 end
 
 function clean()
-    os.pexecute('rm -rf .aite_build a.out Yo.app')
+    os.pexecute('rm -rf .aite_build Yo.app')
 end
