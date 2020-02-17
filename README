@@ -1,0 +1,7 @@
+Trying to get GNUstep to work on Linux...
+
+make -f Makefile # build without GNUstep shite
+make -f GNUmakefile # build with GNUstep shite
+
+the 2nd one goes by default. you also might need to source a thing:
+    /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
