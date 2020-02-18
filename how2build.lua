@@ -24,6 +24,9 @@ function default()
         b.frameworks = {
             'Cocoa',
         }
+        b.library_dirs = {
+            '/usr/local/lib',
+        }
     else
         error('unsupported os'..ffi.os)
     end
