@@ -14,6 +14,7 @@ function default()
             'objc',
             'gnustep-base',
             'gnustep-gui',
+            'dispatch',
         }
         b.sflags = b.sflags..' '..os.capture('gnustep-config --objc-flags')
     elseif ffi.os == 'OSX' then
@@ -26,6 +27,13 @@ function default()
     else
         error('unsupported os'..ffi.os)
     end
+    b.libraries = b.libraries or {}
+    table.insert(b.libraries, 'luajit')
+
+    if os.getenv('LDVERBOSE') then
+        b.ldflags = b.ldflags..' -Wl,--verbose'
+    end
+
     b.output = fs.mkdir('Yo.app')..'/Yo'
     b.src = 'main.m'
     b.build_dir = '.aite_build'

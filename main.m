@@ -24,13 +24,19 @@
     alert.messageText = @"Goodbye, world!";
     alert.informativeText = @"BYEEEE";
 
+    /*
     NSButton *button = [alert addButtonWithTitle:@"Cya"];
     [button retain];
     button.frame = NSMakeRect(0, 0, 50, 50);
     printf("%s %s\n", button.description.UTF8String, button.superview.description.UTF8String);
     printf("%s\n", alert.description.UTF8String);
+    */
 
-    [alert runModal];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [alert runModal];
+        printf("oidsjfaoidsjf\n");
+    });
+    printf("wee\n");
 }
 
 @end
